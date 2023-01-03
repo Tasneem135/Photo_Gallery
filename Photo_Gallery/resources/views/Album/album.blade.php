@@ -1,7 +1,7 @@
 @extends('layouts/albummainblade')
 @section('albums')
 <!----------------------------------Section1-------------------------------------------->
-<section class="section1">
+<section class="section1 ">
   <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -57,7 +57,7 @@
 <!----------------------------------Section1 Finished-------------------------------------------->
 
 <!----------------------------------Section2-------------------------------------------->
-<section class="section2">
+<section class="section2 ">
   <h2>CATEGORY</h2>
   <div class="container d-flex">
     <header class="FindHeader ">
@@ -70,7 +70,7 @@
     <!----------------------------------->
     @foreach($data as $item)
     <div class="Cate text-center">
-         <div class="card border-0">
+         <div class="card border-0 ">
          <a class="item" href="{{route('subgallery.show',$item->id)}}">
          <img src="/images/{{$item['foldImage']}}" class="iimg">
          <h4>{{$item['folderName']}}</h4>
@@ -95,7 +95,6 @@
 <!----------------------------------Section2 Finished-------------------------------------------->
 
 
-
 <!---------------------------------------------------------------SECTION-3---------------------------->
   <section class="section3">
     <div class="container">
@@ -117,6 +116,12 @@
     </div>
   </section>
 
-<!---------------------------------------------------------------SECTION-3 Finished---------------------------->
+
+  <!---------------------------------------------------------------SECTION-3 Finished---------------------------->
+  <!----------------------------------About Us-------------------------------------------->
+@include('Album/about')
+<!----------------------------------Blog-------------------------------------------->
+@include('Album/blog')
+<!----------- Script-------------------->
   <script src="/js/main.js"></script>
 @endsection
